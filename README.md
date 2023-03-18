@@ -185,3 +185,4 @@ Feel free to check the [issues page](https://github.com/ZuhRa-HashiMi/blog_app/i
 - Thanks to the Code Reviewer(s) for the insightful feedback.
 - Hat tip to anyone whose code was used.
 
+<!--  -->
