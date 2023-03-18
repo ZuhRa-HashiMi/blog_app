@@ -190,6 +190,6 @@ Feel free to check the [issues page](https://github.com/ZuhRa-HashiMi/blog_app/i
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/Mujeeb4582/Rails_Blog_App/blob/dev/Licence) licensed.
+This project is [MIT](https://github.com/ZuhRa-HashiMi/blog_app/blob/associations/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
