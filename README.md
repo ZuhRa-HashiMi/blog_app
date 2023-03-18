@@ -26,6 +26,7 @@
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
 - [❓ FAQ](#faq)
+- [📝 License](#license)
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 Rails_Blogs_App <a name="about-project"></a>
@@ -185,3 +186,10 @@ Feel free to check the [issues page](https://github.com/ZuhRa-HashiMi/blog_app/i
 - Thanks to the Code Reviewer(s) for the insightful feedback.
 - Hat tip to anyone whose code was used.
 
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](https://github.com/ZuhRa-HashiMi/blog_app/blob/associations/LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
