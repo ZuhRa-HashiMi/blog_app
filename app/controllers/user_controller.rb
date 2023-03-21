@@ -1,9 +1,9 @@
 class UserController < ApplicationController
-    def index
-        @post = posts.find_by(author_id: params[:id])
-    end
+  def index
+    @users = User.all
+  end
 
-    def show 
-        @user = posts.find_by(author_id: params[:id], :id params[:id])
-    end
+  def show
+    @user = User.find(params[:id])
+  end
 end
