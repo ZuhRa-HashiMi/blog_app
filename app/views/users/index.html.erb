@@ -3,9 +3,13 @@
 <div class ="container">
 <div class = "user_row">
 <div class = "photo">
-<%= image_tag @user.photo %>
+
+<% @users.each do |u| %>
+    <%= u.photo %>
+<% end %>
+
 </div>
 <div class = "intro-details">
-<p class = "user-name"> <%= @users.name %></p>
-<p class = "post-counter"> Number of Posts counter: <%= @user.post_counter %></p>
+<p class = "user-name"> <%= u.name %></p>
+<p class = "post-counter"> Number of Posts counter: <%= u.post_counter %></p>
 </div>
