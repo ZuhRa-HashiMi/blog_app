@@ -5,7 +5,7 @@
 <%= image_tag @user.photo %>
 </div>
 <div class = "intro-details">
-<p class = "user-name"> <%= @user.name %></p>
+<p class = "user-name"> <%= @users.name %></p>
 <p class = "post-counter"> Number of Posts counter: <%= @user.post_counter %></p>
 </div>
 
@@ -16,10 +16,13 @@
 <p class = "counters">Comments:<%= p.comments_counter %>,
 Likes: <%= p.likes_counter %></p>
 </div>
-  
+<div class = "comment-section">
+
+<% p.most_recent_comments.each.each do |c| %>
+<p><%= c.user.name + ":" + c.text %></p>
 <% end %>
-
-
 </div>
-
-<div>
+<%= link_to 'See all users', user_posts_path(@user) %>
+<% end %>
+ <p class = "pagination"> Pagination </p>
+</div>
