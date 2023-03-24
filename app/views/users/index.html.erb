@@ -1,3 +1,11 @@
-<h4>Here is a list of all users.</h4>
-
+<%# <h4>Here is a list of all users.</h4> %>
 <h1><%= @users.first.name %></h1>
+<div class ="container">
+<div class = "user_row">
+<div class = "photo">
+<%= image_tag @user.photo %>
+</div>
+<div class = "intro-details">
+<p class = "user-name"> <%= @users.name %></p>
+<p class = "post-counter"> Number of Posts counter: <%= @user.post_counter %></p>
+</div>
