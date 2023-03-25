@@ -5,8 +5,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    # @user = User.find(params[:author_id])
-    # @post = Post.find_by(id:params[:id])
     @post = User.find(params[:user_id]).posts.find(params[:id])
   end
 
