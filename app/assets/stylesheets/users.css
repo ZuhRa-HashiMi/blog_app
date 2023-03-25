@@ -1,0 +1,68 @@
+/* user index style */
+.container {
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.user-row {
+  display: flex;
+  gap: 20px;
+}
+
+.photo {
+  height: 100px;
+  width: 90px;
+  border: solid 1px black;
+}
+
+.intro-details {
+  height: 100px;
+  width: 90%;
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  position: absolute;
+  font-size: 2rem;
+  padding-left: 20px;
+}
+
+.post-counter {
+  position: relative;
+  padding-right: 10px;
+  align-self: end;
+  top: 60%;
+}
+
+/* user show style */
+.bio {
+  padding: 0 5px;
+  border: solid 1px black;
+}
+
+.post-row {
+  display: flex;
+  flex-direction: column;
+  border: solid 1px black;
+  padding: 0 5px;
+}
+
+.post-title {
+  font-weight: 600;
+}
+
+.post-text {
+  padding-left: 20px;
+}
+
+.counters {
+  align-self: end;
+}
+
+.pagination {
+  text-align: center;
+}
