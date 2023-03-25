@@ -16,12 +16,10 @@ class PostsController < ApplicationController
   end
 
   def create
-
     @post = Post.new(post_params)
     @post.comments_counter=0
     @post.likes_counter = 0
     @post.user_id = current_user.id
-
     if @post.save
       redirect_to user_posts_path(current_user, @post)
     else
@@ -29,7 +27,6 @@ class PostsController < ApplicationController
     end
   end
 
- 
   private
 
   def post_params
