@@ -1,10 +1,32 @@
 class PostsController < ApplicationController
   def index
+    @post = Post.all
     @user = User.find(params[:user_id])
-    @posts = Post.find_by(author_id: params[:id])
   end
 
   def show
-    @post = Post.find_by(id: params[:id])
+    @post = User.find(params[:user_id]).posts.find(params[:id])
+  end
+
+  def new
+    @post = Post.new
+    @user = current_user
+  end
+
+  def create
+    @post = Post.new(post_params)
+    @post.user = current_user
+
+    if @post.save
+      redirect_to user_path(current_user)
+    else
+      render 'new'
+    end
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit(:title, :text)
   end
 end
