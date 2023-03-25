@@ -6,5 +6,5 @@ class LikesController < ApplicationController
       @like.save
       redirect_to user_post_path(@user, @post)
     end
-  end
+end
   
