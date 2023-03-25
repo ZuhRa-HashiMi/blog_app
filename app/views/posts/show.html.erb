@@ -8,15 +8,27 @@
             <p class = "post-text">
                 <%= @post.text %>
             </p>
-            <p>
-                Comments: <%= @post.comments_counter %>,Likes: <%= @post.likes_counter %>
-            </p>
+            <div class="ind-post-footer">
+                <%= button_to 'Like', user_post_likes_path(@post.user, @post) %>
+                <p>
+                    Comments: <%= @post.comments_counter %>,Likes: <%= @post.likes_counter %>
+                </p>
+            </div>
         </div>
+
+
     </div>
+    <%= render '/comments/new' %>
     <div class="comment-section">
         <% @post.most_recent_comments.includes([:user]).each do |c|%>
            
             <p><%= c.user.name + ": " + c.text%></p>
         <%end%>
-    </div> 
+    </div>
+
+    <div class='post-footer'>
+        <button><%= link_to 'Back to posts', user_posts_path(@post.user) %></button> 
+        <button><%= link_to 'Back to users', root_path %></button>
+    </div>
+    
 </div>

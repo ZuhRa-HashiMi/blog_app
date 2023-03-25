@@ -1,0 +1,10 @@
+<div>
+  <p>Add new comment</p>
+  <%= form_with url: user_post_comments_path(@post.user, @post) do |f| %>
+    <div class="enter-comment">
+      <%= f.text_area :text, placeholder: "enter your comment", class:"text-area" %> 
+      <%= f.submit 'Add comment', class:"cmnt-btn" %>
+    </div>
+
+  <% end %>
+</div>

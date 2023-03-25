@@ -4,13 +4,18 @@
 <div class = "user-row">
     <div class = "photo">
         <% if p.photo%>
-                <%=  p.photo %>
-        <% end %>
+                <%= image_tag p.photo %>
+            <% end %>
 
     </div>
     <div class = "u-intro-details">
-        <p>Number of posts:  <%= p.posts_counter %></p>
+       <p class = "u-user-name"> <%= link_to p.name, p %> </p>
+       <div class = "u-post-counter">
+            <button> <%= link_to 'View profile', user_path(p) %></button>
+            <p>Number of posts:  <%= p.posts_counter %></p>
+       </div>
     </div>    
 </div>
+
 <%end%>
 </div>
