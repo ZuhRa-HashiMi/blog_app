@@ -1,0 +1,14 @@
+<div class= "new-post-container">
+  <%= form_with model: @post, url: user_posts_path(@user) do |form| %>
+    <h4> Create your Post</h4>
+    <p>
+      <%= form.text_field :title, placeholder: "Enter post Title", class: "new-post-text" %>
+    </p>
+    <p>
+      <%= form.text_area :text, placeholder: "Enter post description", class: "new-post-text" %>
+    </p>
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %> 
+</div>

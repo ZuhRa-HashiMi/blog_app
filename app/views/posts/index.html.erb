@@ -11,16 +11,26 @@
             <p class = "post-counter">Number of posts:<%= @user.posts_counter %></p>
         </div>
     </div>
+
+    <div class = 'user-post-links'>
+        <button><%= link_to 'Create New Post', new_user_post_path %></button>
+        <button><%= link_to 'Back to users', root_path %></button>
+    </div>
+
+
     <% @user.posts.each do |p| %>
         <div class = "post-row">
             <p class ="post-title"> <%= p.title%></p>
             <p class ="post-text"><%= p.text%></p>
+            
+            <div class="user-post-footer">
+                <button><%= link_to 'view post', user_post_path(@user, p)%></button>
                 <p>Comments: <%= p.comments_counter%>, Likes: <%= p.likes_counter%></p>
             </div>
         </div>
         <div class="comment-section">
-            <% p.most_recent_comments.includes(:author).each do |c|%>
-                    <P><%= c.author.name + ": " + c.text%></P>
+            <% p.most_recent_comments.includes([:user]).each do |c|%>
+                    <P><%= c.user.name + ": " + c.text%></P>
             <% end %>
         </div>
 

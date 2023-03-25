@@ -3,7 +3,7 @@
         <div class = "photo">
         <% if @user.photo%>
         <%= image_tag @user.photo %>
-        <% end %>
+    <% end %>
 
         </div>
         <div class = "intro-details">
@@ -19,7 +19,8 @@
         <div class = "post-row">
             <p class ="post-title"> <%= p.title%></p>
             <p class ="post-text"><%= p.text%></p>
-            <p>
+            <p class="posts-footer">
+                <button> <%= link_to 'View Post', user_post_url(@user, p) %></button>
                 Comments: <%= p.comments_counter%>, Likes: <%= p.likes_counter%>
             </p>
             
