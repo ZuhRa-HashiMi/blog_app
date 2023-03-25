@@ -17,7 +17,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    @post.comments_counter=0
+    @post.comments_counter = 0
     @post.likes_counter = 0
     @post.user_id = current_user.id
     if @post.save
