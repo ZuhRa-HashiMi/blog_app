@@ -1,12 +1,16 @@
 <div class = "container">
+
 <% @user.each do |p| %>
 <div class = "user-row">
     <div class = "photo">
-        <%= image_tag p.photo %>
+        <% if p.photo%>
+                <%=  p.photo %>
+        <% end %>
+
     </div>
-    <div class = "intro-details">
-       <p class = "user-name"> <%= p.name  %> </p>
-       <p class = "post-counter">Number of posts:  <%= p.posts_counter %> </p>
+    <div class = "u-intro-details">
+        <p>Number of posts:  <%= p.posts_counter %></p>
     </div>    
-</div> 
-</div>   
+</div>
+<%end%>
+</div>
