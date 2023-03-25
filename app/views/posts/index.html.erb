@@ -1,1 +1,29 @@
-<h4>All the list of post for users is avalible here.</h4>
+<div class = "container">
+    <div class = "user-row">
+        <div class = "photo">
+        <% if @user.photo%>
+        <%= image_tag @user.photo %>
+    <%end%>
+
+        </div>
+        <div class = "intro-details">
+            <p class = "user-name"><%= @user.name %></p>
+            <p class = "post-counter">Number of posts:<%= @user.posts_counter %></p>
+        </div>
+    </div>
+    <% @user.posts.each do |p| %>
+        <div class = "post-row">
+            <p class ="post-title"> <%= p.title%></p>
+            <p class ="post-text"><%= p.text%></p>
+                <p>Comments: <%= p.comments_counter%>, Likes: <%= p.likes_counter%></p>
+            </div>
+        </div>
+        <div class="comment-section">
+            <% p.most_recent_comments.includes(:author).each do |c|%>
+                    <P><%= c.author.name + ": " + c.text%></P>
+            <% end %>
+        </div>
+
+    <%end%>
+
+</div>
