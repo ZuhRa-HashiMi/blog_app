@@ -18,7 +18,7 @@
     </div>
 
 
-    <% @user.posts.each do |p| %>
+    <% @user.posts.includes([:user]).each do |p| %>
         <div class = "post-row">
             <p class ="post-title"> <%= p.title%></p>
             <p class ="post-text"><%= p.text%></p>
