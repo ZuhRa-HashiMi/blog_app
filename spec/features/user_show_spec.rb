@@ -14,5 +14,14 @@ RSpec.describe "Users", type: :system do
       visit users_path(user3)
       expect(page).to have_selector("img[src='#{user3.photo}']")
     end
+
+    it "I can see the user's username." do
+      visit users_path(user1)
+      expect(page).to have_content(user1.name)
+      visit users_path(user2)
+      expect(page).to have_content(user2.name)
+      visit users_path(user3)
+      expect(page).to have_content(user3.name)
+    end
   end
 end
