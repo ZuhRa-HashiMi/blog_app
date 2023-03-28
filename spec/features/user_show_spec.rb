@@ -23,5 +23,14 @@ RSpec.describe "Users", type: :system do
       visit users_path(user3)
       expect(page).to have_content(user3.name)
     end
+
+    it "I can see the number of posts the user has written." do
+      visit users_path(user1)
+      expect(page).to have_content(user1.posts_counter)
+      visit users_path(user2)
+      expect(page).to have_content(user2.posts_counter)
+      visit users_path(user3)
+      expect(page).to have_content(user3.posts_counter)
+    end
   end
 end
