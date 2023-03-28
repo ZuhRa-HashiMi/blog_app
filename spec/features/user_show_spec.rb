@@ -32,5 +32,14 @@ RSpec.describe "Users", type: :system do
       visit users_path(user3)
       expect(page).to have_content(user3.posts_counter)
     end
+
+    it "can see the user's bio." do
+      visit user_path(user1)
+      expect(page).to have_content(user1.bio)
+      visit user_path(user2)
+      expect(page).to have_content(user2.bio)
+      visit user_path(user3)
+      expect(page).to have_content(user3.bio)
+    end
   end
 end
