@@ -48,5 +48,10 @@ RSpec.describe "Users", type: :system do
         expect(page).to have_content(page.text)
       end
     end
+
+    it "can see a button that lets me view all of a user's posts." do
+      visit user_path(user1)
+      expect(page).to have_link('See all posts', href: user_posts_path(user1))
+    end
   end
 end
