@@ -4,3 +4,4 @@ e:/module_5/blog_app/spec/features/user_index_spec.rb[1:1:1] | passed | 1.52 sec
 e:/module_5/blog_app/spec/features/user_index_spec.rb[1:1:2] | passed | 8.6 seconds  |
 e:/module_5/blog_app/spec/features/user_index_spec.rb[1:1:3] | passed | 1.81 seconds |
 e:/module_5/blog_app/spec/features/user_index_spec.rb[1:1:4] | passed | 1.62 seconds |
+e:/module_5/blog_app/spec/features/user_show_spec.rb[1:1:1]  | passed | 8.22 seconds |
