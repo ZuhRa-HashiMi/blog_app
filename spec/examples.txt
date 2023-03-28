@@ -10,6 +10,13 @@ e:/module_5/blog_app/spec/features/post_index_spec.rb[1:1:7]  | passed | 1.12 se
 e:/module_5/blog_app/spec/features/post_index_spec.rb[1:1:8]  | passed | 1.38 seconds    |
 e:/module_5/blog_app/spec/features/post_index_spec.rb[1:1:9]  | failed | 2.89 seconds    |
 e:/module_5/blog_app/spec/features/post_index_spec.rb[1:1:10] | failed | 2.85 seconds    |
+e:/module_5/blog_app/spec/features/post_show_spec.rb[1:1:1]   | failed | 2.73 seconds    |
+e:/module_5/blog_app/spec/features/post_show_spec.rb[1:1:2]   | failed | 0.73237 seconds |
+e:/module_5/blog_app/spec/features/post_show_spec.rb[1:1:3]   | failed | 2.76 seconds    |
+e:/module_5/blog_app/spec/features/post_show_spec.rb[1:1:4]   | passed | 0.73103 seconds |
+e:/module_5/blog_app/spec/features/post_show_spec.rb[1:1:5]   | passed | 0.69902 seconds |
+e:/module_5/blog_app/spec/features/post_show_spec.rb[1:1:6]   | failed | 6.55 seconds    |
+e:/module_5/blog_app/spec/features/post_show_spec.rb[1:1:7]   | passed | 0.76424 seconds |
 e:/module_5/blog_app/spec/features/user_index_spec.rb[1:1:1]  | passed | 1.52 seconds    |
 e:/module_5/blog_app/spec/features/user_index_spec.rb[1:1:2]  | passed | 8.6 seconds     |
 e:/module_5/blog_app/spec/features/user_index_spec.rb[1:1:3]  | passed | 1.81 seconds    |
