@@ -7,11 +7,11 @@ RSpec.describe "Users", type: :system do
   let(:user3) { users(:three)}
   describe 'show page ' do 
     it 'I can see the users profile picture.' do
-      visit users_path(user1)
+      visit user_path(user1)
       expect(page).to have_selector("img[src='#{user1.photo}']")
-      visit users_path(user2)
+      visit user_path(user2)
       expect(page).to have_selector("img[src='#{user2.photo}']")
-      visit users_path(user3)
+      visit user_path(user3)
       expect(page).to have_selector("img[src='#{user3.photo}']")
     end
 
@@ -25,11 +25,11 @@ RSpec.describe "Users", type: :system do
     end
 
     it "I can see the number of posts the user has written." do
-      visit users_path(user1)
+      visit user_path(user1)
       expect(page).to have_content(user1.posts_counter)
-      visit users_path(user2)
+      visit user_path(user2)
       expect(page).to have_content(user2.posts_counter)
-      visit users_path(user3)
+      visit user_path(user3)
       expect(page).to have_content(user3.posts_counter)
     end
 
@@ -40,6 +40,13 @@ RSpec.describe "Users", type: :system do
       expect(page).to have_content(user2.bio)
       visit user_path(user3)
       expect(page).to have_content(user3.bio)
+    end
+
+    it "I can see the user's first 3 posts." do
+      visit user_path(user1)
+      user1.recent_posts.each do |post|
+        expect(page).to have_content(page.text)
+      end
     end
   end
 end
