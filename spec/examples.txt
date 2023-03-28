@@ -4,9 +4,11 @@ e:/module_5/blog_app/spec/features/user_index_spec.rb[1:1:1] | passed | 1.52 sec
 e:/module_5/blog_app/spec/features/user_index_spec.rb[1:1:2] | passed | 8.6 seconds     |
 e:/module_5/blog_app/spec/features/user_index_spec.rb[1:1:3] | passed | 1.81 seconds    |
 e:/module_5/blog_app/spec/features/user_index_spec.rb[1:1:4] | passed | 1.62 seconds    |
-e:/module_5/blog_app/spec/features/user_show_spec.rb[1:1:1]  | passed | 1.33 seconds    |
-e:/module_5/blog_app/spec/features/user_show_spec.rb[1:1:2]  | passed | 1.43 seconds    |
+e:/module_5/blog_app/spec/features/user_show_spec.rb[1:1:1]  | passed | 1.31 seconds    |
+e:/module_5/blog_app/spec/features/user_show_spec.rb[1:1:2]  | passed | 1.4 seconds     |
 e:/module_5/blog_app/spec/features/user_show_spec.rb[1:1:3]  | passed | 1.36 seconds    |
-e:/module_5/blog_app/spec/features/user_show_spec.rb[1:1:4]  | passed | 1.49 seconds    |
-e:/module_5/blog_app/spec/features/user_show_spec.rb[1:1:5]  | passed | 0.68123 seconds |
-e:/module_5/blog_app/spec/features/user_show_spec.rb[1:1:6]  | passed | 6.71 seconds    |
+e:/module_5/blog_app/spec/features/user_show_spec.rb[1:1:4]  | passed | 1.44 seconds    |
+e:/module_5/blog_app/spec/features/user_show_spec.rb[1:1:5]  | passed | 0.73674 seconds |
+e:/module_5/blog_app/spec/features/user_show_spec.rb[1:1:6]  | passed | 0.7659 seconds  |
+e:/module_5/blog_app/spec/features/user_show_spec.rb[1:1:7]  | passed | 6.76 seconds    |
+e:/module_5/blog_app/spec/features/user_show_spec.rb[1:1:8]  | passed | 0.878 seconds   |
