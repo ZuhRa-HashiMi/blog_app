@@ -1,0 +1,20 @@
+one:
+  id: 1
+  name: John Doe
+  photo: "https://unsplash.com/photos/F_-0BxGuVvo"
+  bio: This is John Doe. He is a good man.
+  posts_counter: 6
+
+two:
+  id: 2
+  name: Jane Smith
+  photo: "https://unsplash.com/photos/F_-0BxGuVvo"
+  bio: This is John Doe. He is a good man.
+  posts_counter: 0
+
+three:
+  id: 3
+  name: Gina Beki
+  photo: "https://unsplash.com/photos/F_-0BxGuVvo"
+  bio: This is Gina Beki. He is a good women.
+  posts_counter: 0

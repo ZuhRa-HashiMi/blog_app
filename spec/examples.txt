@@ -1,0 +1,4 @@
+example_id                                                   | status | run_time        |
+------------------------------------------------------------ | ------ | --------------- |
+e:/module_5/blog_app/spec/features/user_index_spec.rb[1:1:1] | passed | 8.07 seconds    |
+e:/module_5/blog_app/spec/features/user_index_spec.rb[1:1:2] | passed | 0.90268 seconds |
