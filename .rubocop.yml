@@ -60,4 +60,4 @@ Style/HashTransformKeys:
 Style/HashTransformValues:
   Enabled: false
 Layout/LineLength:
-  Max: 100
+  Max: 200
