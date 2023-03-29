@@ -31,8 +31,7 @@ RSpec.describe Post, type: :model do
   end
 
   describe 'update_posts_counter' do
-    let!(:post) { Post.create!(title: 'My First Post', user: user,
-      text: 'Zuhra is a good girl', comments_counter: 0, likes_counter: 0) }
+    let!(:post) { Post.create!(title: 'My First Post', user: , text: 'Zuhra is a good girl', comments_counter: 0, likes_counter: 0) }
 
     it 'increments the user post counter after saving' do
       expect { post.save }.to change { user.reload.posts_counter }.by(1)
