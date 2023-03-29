@@ -44,7 +44,7 @@ RSpec.describe 'Users', type: :system do
 
     it 'I can see the users first 3 posts.' do
       visit user_path(user1)
-      user1.recent_posts.each do |post|
+      user1.recent_posts.each do 
         expect(page).to have_content(page.text)
       end
     end
