@@ -8,7 +8,8 @@ RSpec.describe Like, type: :model do
 
   describe 'update_post_likes_counter' do
     let!(:user) { User.create!(name: 'John Doe', posts_counter: 0) }
-    let!(:post) { Post.create!(title: 'My First Post', user: user, text: 'this is my first post', comments_counter: 0, likes_counter: 0) }
+    let!(:post) { Post.create!(title: 'My First Post', user: user,
+    text: 'this is my first post', comments_counter: 0, likes_counter: 0) }
     let!(:like) { Like.new(user: user, post:) }
 
     it 'increments the post likes counter after saving' do
