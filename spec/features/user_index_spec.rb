@@ -5,7 +5,7 @@ RSpec.describe 'Users', type: :system do
   let(:user1) { users(:one) }
   let(:user2) { users(:two) }
   let(:user3) { users(:three) }
-  describe 'index page' do 
+  describe 'index page' do
     it 'I can see the user name of all other users.' do
       visit users_path
       expect(page).to have_content(user1.name)
