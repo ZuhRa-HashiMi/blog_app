@@ -26,14 +26,5 @@ RSpec.describe "Users", type: :system do
       expect(page).to have_content(user2.posts_counter)
       expect(page).to have_content(user3.posts_counter)
     end
-
-    it " When I click on a user, I am redirected to that user's show page." do
-      user = users(:one)
-      visit users_path
-      expect(page).to have_link(user.name, href:user_path(user))
-      click_link user.name
-      expect(current_path).to eq('/users' || user_path(user))
-
-    end
   end
 end

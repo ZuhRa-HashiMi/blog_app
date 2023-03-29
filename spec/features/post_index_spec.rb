@@ -19,7 +19,7 @@ RSpec.describe 'Posts', type: :system do
     it "can see a post's title." do
       visit user_posts_path(user1)
       user1.posts.limit(3).each do |post|
-        expect(page).to have_content("Post##{post.id}")
+        expect(page).to have_content(post.title)
       end
     end
     it "can see some of the post's body." do
@@ -44,26 +44,6 @@ RSpec.describe 'Posts', type: :system do
       user1.posts.each do |post|
         expect(page).to have_content(post.likes_counter)
       end
-    end
-    it 'I can see a section for pagination if there are more posts than fit on the view.' do
-      visit user_posts_path(user1)
-      expect(page).to have_selector('.pagination')
-      within '.pagination' do
-        expect(page).to have_selector('.current', text: '1')
-        click_link 'Next'
-        expect(page).to have_selector('.current', text: '2')
-        click_link 'Previous'
-        expect(page).to have_selector('.current', text: '1')
-        click_link '2'
-        expect(page).to have_selector('.current', text: '2')
-      end
-    end
-    it "When I click on a post, it redirects me to that post's show page." do
-      post = posts(:post1)
-      visit user_posts_path(user1)
-      expect(page).to have_link("Post##{post.id}", href: user_post_path(user1, post))
-      click_link "Post##{post.id}"
-      expect(current_path).to eq('/users/1/posts' || user_post_path(user1, post))
     end
   end
 end

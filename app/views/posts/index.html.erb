@@ -24,6 +24,7 @@
             <p class ="post-text"><%= p.text%></p>
             
             <div class="user-post-footer">
+            
                 <button><%= link_to 'view post', user_post_path(@user, p)%></button>
                 <p>Comments: <%= p.comments_counter%>, Likes: <%= p.likes_counter%></p>
             </div>

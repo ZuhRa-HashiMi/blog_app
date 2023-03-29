@@ -7,11 +7,11 @@ RSpec.describe 'Posts', type: :system do
   describe 'show page' do
     it "can see the post's title." do
       visit user_post_path(user1, post)
-      expect(page).to have_content("Post ##{post.id}")
+      expect(page).to have_content(post.title)
     end
     it 'can see who wrote the post.' do
       visit user_post_path(user1, post)
-      expect(page).to have_content(post.author.name)
+      expect(page).to have_content(post.user.name)
     end
     it 'can see how many comments it has.' do
       visit user_post_path(user1, post)
@@ -28,7 +28,7 @@ RSpec.describe 'Posts', type: :system do
     it 'can see the username of each commenter.' do
       visit user_post_path(user1, post)
       post.comments.each do |comment|
-        expect(page).to have_content(comment.author.name)
+        expect(page).to have_content(comment.user.name)
       end
     end
     it 'can see the comment each commenter left.' do
