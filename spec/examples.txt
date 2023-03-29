@@ -1,0 +1,9 @@
+example_id                                                  | status | run_time        |
+----------------------------------------------------------- | ------ | --------------- |
+e:/module_5/blog_app/spec/features/user_show_spec.rb[1:1:1] | passed | 1.45 seconds    |
+e:/module_5/blog_app/spec/features/user_show_spec.rb[1:1:2] | passed | 1.7 seconds     |
+e:/module_5/blog_app/spec/features/user_show_spec.rb[1:1:3] | passed | 8.64 seconds    |
+e:/module_5/blog_app/spec/features/user_show_spec.rb[1:1:4] | passed | 1.63 seconds    |
+e:/module_5/blog_app/spec/features/user_show_spec.rb[1:1:5] | passed | 1.38 seconds    |
+e:/module_5/blog_app/spec/features/user_show_spec.rb[1:1:6] | passed | 0.81418 seconds |
+e:/module_5/blog_app/spec/features/user_show_spec.rb[1:1:7] | passed | 0.97126 seconds |
