@@ -4,7 +4,7 @@ RSpec.describe Post, type: :model do
   let(:user) { User.create(name: 'John Doe', posts_counter: 0) }
 
   describe 'associations' do
-    it { should belong_to(:user).class_name('User')}
+    it { should belong_to(:user).class_name('User') }
     it { should have_many(:comments) }
     it { should have_many(:likes) }
   end
@@ -18,12 +18,12 @@ RSpec.describe Post, type: :model do
 
   describe 'most_recent_comments' do
     let!(:post) { Post.create!(title: 'My First Post', user:, text: 'Zuhra is a good girl', comments_counter: 0, likes_counter: 0) }
-    let!(:comment1) { Comment.create!(post:, user: user, text: 'First Comment') }
-    let!(:comment2) { Comment.create!(post:, user: user, text: 'Second Comment') }
-    let!(:comment3) { Comment.create!(post:, user: user, text: '3rd Comment') }
-    let!(:comment4) { Comment.create!(post:, user: user, text: 'fourth Comment') }
-    let!(:comment5) { Comment.create!(post:, user: user, text: 'fifth Comment') }
-    let!(:comment6) { Comment.create!(post:, user: user, text: 'sixth Comment') }
+    let!(:comment1) { Comment.create!(post:, user:, text: 'First Comment') }
+    let!(:comment2) { Comment.create!(post:, user:, text: 'Second Comment') }
+    let!(:comment3) { Comment.create!(post:, user:, text: '3rd Comment') }
+    let!(:comment4) { Comment.create!(post:, user:, text: 'fourth Comment') }
+    let!(:comment5) { Comment.create!(post:, user:, text: 'fifth Comment') }
+    let!(:comment6) { Comment.create!(post:, user:, text: 'sixth Comment') }
 
     it 'limits the number of most recent comments upto 5 for the post' do
       expect(post.most_recent_comments).to eq([comment6, comment5, comment4, comment3, comment2])
