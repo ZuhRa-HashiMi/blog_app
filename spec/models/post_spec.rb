@@ -17,7 +17,7 @@ RSpec.describe Post, type: :model do
   end
 
   describe 'most_recent_comments' do
-    let!(:post) { Post.create!(title: 'My First Post', user: user, text: 'Zuhra is a good girl', comments_counter: 0, likes_counter: 0) }
+    let!(:post) { Post.create!(title: 'My First Post', user:, text: 'Zuhra is a good girl', comments_counter: 0, likes_counter: 0) }
     let!(:comment1) { Comment.create!(post:, user: user, text: 'First Comment') }
     let!(:comment2) { Comment.create!(post:, user: user, text: 'Second Comment') }
     let!(:comment3) { Comment.create!(post:, user: user, text: '3rd Comment') }
@@ -31,7 +31,7 @@ RSpec.describe Post, type: :model do
   end
 
   describe 'update_posts_counter' do
-    let!(:post) { Post.create!(title: 'My First Post', user: , text: 'Zuhra is a good girl', comments_counter: 0, likes_counter: 0) }
+    let!(:post) { Post.create!(title: 'My First Post', user:, text: 'Zuhra is a good girl', comments_counter: 0, likes_counter: 0) }
 
     it 'increments the user post counter after saving' do
       expect { post.save }.to change { user.reload.posts_counter }.by(1)
