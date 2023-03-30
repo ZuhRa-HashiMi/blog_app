@@ -19,14 +19,18 @@
   padding: 10px;
 }
 
-#user_name,
-#user_surname,
-#user_email,
-#user_password,
-#user_password_confirmation {
-  width: 220px;
+/* #user_email,
+#user_password {
+  width: 100%;
   height: 25px;
+  margin: 10px;
 }
+
+.Login {
+  width: 100%;
+  height: 25px;
+  margin: 10px;
+} */
 
 .header_signout_button {
   display: flex;
