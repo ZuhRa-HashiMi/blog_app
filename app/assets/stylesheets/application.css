@@ -19,19 +19,6 @@
   padding: 10px;
 }
 
-/* #user_email,
-#user_password {
-  width: 100%;
-  height: 25px;
-  margin: 10px;
-}
-
-.Login {
-  width: 100%;
-  height: 25px;
-  margin: 10px;
-} */
-
 .header_signout_button {
   display: flex;
   flex-direction: row-reverse;
