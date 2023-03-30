@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+ .main-container {
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  #user_name,
+  #user_surname,
+  #user_email,
+  #user_password,
+  #user_password_confirmation {
+    width: 220px;
+    height: 25px;
+  }
+  
+  .header_signout_button {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+    align-items: center;
+  }
