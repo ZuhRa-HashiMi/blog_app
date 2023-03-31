@@ -8,8 +8,10 @@ class Ability
     if user.role == "admin"
       can :manage, :all
     else
-      can :destroy, Post, user_id: user.id
-      can :destroy, Comment, user_id: user.id
+      can :read, :all
+      can :manage, User, id: user.id
+      can :manage, Post, user_id: user.id
+      can :manage, Comment, user_id: user.id
     end
   end
 end
