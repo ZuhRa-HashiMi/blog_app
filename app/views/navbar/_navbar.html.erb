@@ -1,0 +1,6 @@
+<div class='header_signout_button'> 
+    <% if current_user %>
+        <%= button_to "Sign out", destroy_user_session_path, method: :delete, class:"nav-link" %>
+        <%= current_user.name%>
+    <%end%>
+</div>

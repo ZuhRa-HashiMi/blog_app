@@ -30,7 +30,19 @@ Rails.application.configure do
   else
     config.action_controller.perform_caching = false
 
+    config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
     config.cache_store = :null_store
+
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+      :user_name => '5fd5e23c027559',
+      :password => '4eac3bf63017be',
+      :address => 'sandbox.smtp.mailtrap.io',
+      :domain => 'sandbox.smtp.mailtrap.io',
+      :port => '2525',
+      :authentication => :cram_md5
+    }
   end
 
   # Store uploaded files on the local file system (see config/storage.yml for options).

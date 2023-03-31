@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+.main-container {
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+}
+
+.header_signout_button {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 20px;
+  align-items: center;
+}
