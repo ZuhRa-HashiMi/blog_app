@@ -81,6 +81,8 @@ gem 'htmlbeautifier'
 
 gem 'will_paginate', '~> 3.3.0'
 
+gem 'cancancan'
+
 gem 'devise'
 
-gem 'cancancan'
+
