@@ -26,6 +26,10 @@
             <div class="user-post-footer">
             
                 <button><%= link_to 'view post', user_post_path(@user, p)%></button>
+                 <% if can? :destroy, p%>
+                <%= button_to 'Delete Post', user_post_path(@user, p), method: :delete, data: { turbo: false} %>
+                <%end%>
+
                 <p>Comments: <%= p.comments_counter%>, Likes: <%= p.likes_counter%></p>
             </div>
         </div>
