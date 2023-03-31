@@ -2,15 +2,15 @@ class CommentsController < ApplicationController
   def new
     @comment = Comment.new
   end
-  
-  def destroy 
+
+  def destroy
     @post = Post.find(params[:post_id])
-    @comment =@post.comments.find(params[:id])
+    @comment = @post.comments.find(params[:id])
     @comment.destroy
     redirect_back(fallback_location: root_path)
-    flash[:notice] = "Comment successfully deleted."
+    flash[:notice] = 'Comment successfully deleted.'
   end
-  
+
   def create
     @user = current_user
     @post = Post.find(params[:post_id])
