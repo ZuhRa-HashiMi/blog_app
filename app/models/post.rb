@@ -2,7 +2,6 @@ class Post < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :comments, dependent: :destroy
 
-  # belongs_to :author, class_name: 'User', foreign_key: 'author_id'
   belongs_to :user, class_name: 'User', foreign_key: 'user_id'
 
   validates :title, presence: true, length: { maximum: 250 }
@@ -11,11 +10,11 @@ class Post < ApplicationRecord
   validates :likes_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   after_save :update_counters
-  after_destroy :update_counters
+  # after_destroy :update_counters
 
   def update_counters
     user.increment!(:posts_counter)
-    user.decrement!(:posts_counter)
+    # user.decrement!(:posts_counter)
   end
 
   def most_recent_comments

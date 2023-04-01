@@ -11,7 +11,9 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    @user = current_user
+    user_id = params[:user_id].to_i
+    return if current_user.id == user_id
+    authorize! :create, @post
   end
 
   def create
@@ -27,12 +29,16 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
-    @post.destroy
-    respond_to do |format|
-      format.html { redirect_to user_posts_path, notice: 'Post successfully Deleted.' }
-      format.json { head :no_content }
+    user = current_user
+    @post = Post.find_by(id: params[:id], user_id: params[:user_id])
+    @post.comments.destroy_all
+    @post.likes.destroy_all
+    if @post.destroy
+      flash[:notice] = 'Post deleted '
+    else
+      flash[:alert] = 'post deletion failed'
     end
+    redirect_to user_posts_path(user)
   end
 
   private
